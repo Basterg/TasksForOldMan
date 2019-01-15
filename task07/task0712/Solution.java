@@ -52,7 +52,7 @@ public class Solution {
             int j = arrayList.get(i).length();
             if (j == min || j == max) {
                 System.out.println(arrayList.get(i));
-                i = arrayList.size();
+                break;
             }
         }
     }
