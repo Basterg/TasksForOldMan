@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Solution {
-    static int index;
+    private static int indexOfMin;
 
     public static void main(String[] args) throws Exception {
         int[] list = new int[5];
@@ -22,23 +22,23 @@ public class Solution {
     }
 
     public static void printArrayAscending(int[] array) {
-        int a;
         for (int i = 0; i < 4; i++) {
-            a = array[i];
+            int a = array[i];
             array[i] = min(array, i);
-            array[index] = a;
+            array[indexOfMin] = a;
         }
         for (int i = 0; i < 5; i++) {
             System.out.println(array[i]);
         }
     }
 
-    public static int min( int[] array, int a) {
-        int min = array[a];
-        for (int i = a; i < 5; i++) {
-            if (array[i] < min) {
-                min = array[i];
-                index = i;
+    public static int min( int[] array, int initialIndex) {
+        int min = array[initialIndex];
+        for (int i = initialIndex + 1; i < 5; i++) {
+            int a = array[i];
+            if (a < min) {
+                min = a;
+                indexOfMin = i;
             }
         }
         return min;
