@@ -19,13 +19,13 @@ public class Solution {
     }
 
     public static void addStrings(ArrayList<String> arrayList) {
-        for (int i = 1; i < 6; i += 2) {
+        for (int i = 1; i < arrayList.size() * 2; i += 2) {
             arrayList.add(i, "именно");
         }
     }
 
     public static void printArray(ArrayList<String> arrayList) {
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < arrayList.size() * 2; i++) {
             System.out.println(arrayList.get(i));
         }
     }
