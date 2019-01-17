@@ -7,25 +7,26 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Solution {
+    static ArrayList<String> arrayList = new ArrayList<>();
+
     public static void main(String[] args) throws Exception {
-        ArrayList<String> arrayList = new ArrayList<>();
-        initializeArray(arrayList);
-        removeThirdElement(arrayList);
-        printReverseArray(arrayList);
+        initializeArray();
+        removeThirdElement();
+        printReverseArray();
     }
 
-    public static void initializeArray(ArrayList<String> arrayList) throws IOException {
+    public static void initializeArray() throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         for (int i = 0; i < 5; i++) {
             arrayList.add(reader.readLine());
         }
     }
 
-    public static void removeThirdElement(ArrayList<String> arrayList) {
+    public static void removeThirdElement() {
         arrayList.remove(2);
     }
 
-    public static void printReverseArray(ArrayList<String> arrayList) {
+    public static void printReverseArray() {
         for (int i = arrayList.size() - 1; i >= 0; i--) {
             System.out.println(arrayList.get(i));
         }
