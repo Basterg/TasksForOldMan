@@ -25,7 +25,7 @@ public class Solution {
     }
 
     public static ArrayList<String> doubleValues(ArrayList<String> arrayList) {
-        for (int i = 0; i < 19; i +=2) {
+        for (int i = 0; i < (arrayList.size() * 2) - 1; i += 2) {
             arrayList.add(i + 1, arrayList.get(i));
         }
         return arrayList;
