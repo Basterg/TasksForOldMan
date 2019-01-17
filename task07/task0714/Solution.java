@@ -10,7 +10,8 @@ public class Solution {
     public static void main(String[] args) throws Exception {
         ArrayList<String> arrayList = new ArrayList<>();
         initializeArray(arrayList);
-        remove3dAndPrintReverseArray(arrayList);
+        removeThirdElement(arrayList);
+        printReverseArray(arrayList);
     }
 
     public static void initializeArray(ArrayList<String> arrayList) throws IOException {
@@ -20,9 +21,12 @@ public class Solution {
         }
     }
 
-    public static void remove3dAndPrintReverseArray(ArrayList<String> arrayList) {
+    public static void removeThirdElement(ArrayList<String> arrayList) {
         arrayList.remove(2);
-        for (int i = 3; i >= 0; i--) {
+    }
+
+    public static void printReverseArray(ArrayList<String> arrayList) {
+        for (int i = arrayList.size() - 1; i >= 0; i--) {
             System.out.println(arrayList.get(i));
         }
     }
