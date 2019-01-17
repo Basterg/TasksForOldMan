@@ -24,9 +24,9 @@ public class Solution {
 
     public static void isAssorted(ArrayList<String> arrayList) {
         for (int i = 0; i < arrayList.size() - 1; i++) {
-            int j = arrayList.get(i).length();
-            int k = arrayList.get(i + 1).length();
-            if (j > k) {
+            int lengthOfString = arrayList.get(i).length();
+            int lengthOfNextString = arrayList.get(i + 1).length();
+            if (lengthOfString > lengthOfNextString) {
                 System.out.println(i + 1);
                 break;
             }
