@@ -14,10 +14,10 @@ public class Solution {
         printArray(arrayList);
     }
 
-    public static void initializeArray(ArrayList<String> arrayListt) throws IOException {
+    public static void initializeArray(ArrayList<String> arrayList) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         for (int i = 0; i < 5; i++) {
-            arrayListt.add(reader.readLine());
+            arrayList.add(reader.readLine());
         }
     }
 
