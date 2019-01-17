@@ -13,7 +13,7 @@ public class Solution {
     public static void main(String[] args) throws Exception {
         ArrayList<String> arrayList = new ArrayList<>();
         initializeArray(arrayList);
-        printMinOrMaxLenghtString(arrayList);
+        printMinOrMaxLengthString(arrayList);
     }
 
     public static void initializeArray(ArrayList<String> arrayList) throws IOException {
@@ -23,37 +23,25 @@ public class Solution {
         }
     }
 
-    public static int maxLenghtString(ArrayList<String> arrayList) {
-        int max = arrayList.get(0).length();
-        for (int i = 1; i < arrayList.size(); i++) {
+    public static void printMinOrMaxLengthString(ArrayList<String> arrayList) {
+        int minLengthString = arrayList.get(0).length();
+        int maxLengthString = arrayList.get(0).length();
+        int indexOfMin = 0;
+        int indexOfMax = 0;
+        for (int i = arrayList.size() - 1; i > 0; i--) {
             int j = arrayList.get(i).length();
-            if (j > max) {
-                max = j;
+            if (j >= maxLengthString) {
+                maxLengthString = j;
+                indexOfMax = i;
+            } else if (j <= minLengthString) {
+                minLengthString = j;
+                indexOfMin = i;
             }
         }
-        return max;
-    }
-
-    public static int minLenghtString(ArrayList<String> arrayList) {
-        int min = arrayList.get(0).length();
-        for (int i = 1; i < arrayList.size(); i++) {
-            int j = arrayList.get(i).length();
-            if (j < min) {
-                min = j;
-            }
-        }
-        return min;
-    }
-
-    public static void printMinOrMaxLenghtString(ArrayList<String> arrayList) {
-        int min = minLenghtString(arrayList);
-        int max = maxLenghtString(arrayList);
-        for (int i = 0; i < arrayList.size(); i++) {
-            int j = arrayList.get(i).length();
-            if (j == min || j == max) {
-                System.out.println(arrayList.get(i));
-                break;
-            }
+        if (indexOfMax < indexOfMin) {
+            System.out.println(arrayList.get(indexOfMax));
+        } else {
+            System.out.println(arrayList.get(indexOfMin));
         }
     }
 }
