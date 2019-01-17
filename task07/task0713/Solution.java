@@ -7,12 +7,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Solution {
+    static ArrayList<Integer> arrayList = new ArrayList<>();
+    static ArrayList<Integer> arrayListMultipleOf2 = new ArrayList<>();
+    static ArrayList<Integer> arrayListMultipleOf3 = new ArrayList<>();
+    static ArrayList<Integer> arrayList1Other = new ArrayList<>();
+
     public static void main(String[] args) throws Exception {
-        ArrayList<Integer> arrayList = new ArrayList<>();
         initializeArray(arrayList);
-        ArrayList<Integer> arrayListMultipleOf2 = new ArrayList<>();
-        ArrayList<Integer> arrayListMultipleOf3 = new ArrayList<>();
-        ArrayList<Integer> arrayList1Other = new ArrayList<>();
         multiplicitySorting(arrayList, arrayListMultipleOf2, arrayListMultipleOf3, arrayList1Other);
         printList(arrayListMultipleOf2, arrayListMultipleOf3, arrayList1Other);
     }
