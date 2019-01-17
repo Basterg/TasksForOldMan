@@ -24,24 +24,19 @@ public class Solution {
     }
 
     public static void printMinOrMaxLengthString(ArrayList<String> arrayList) {
-        int minLengthString = arrayList.get(0).length();
-        int maxLengthString = arrayList.get(0).length();
-        int indexOfMin = 0;
-        int indexOfMax = 0;
+        int minLengthOfString = arrayList.get(0).length();
+        int maxLengthOfString = arrayList.get(0).length();
+        int indexOfMinOrMax = 0;
         for (int i = arrayList.size() - 1; i > 0; i--) {
-            int j = arrayList.get(i).length();
-            if (j >= maxLengthString) {
-                maxLengthString = j;
-                indexOfMax = i;
-            } else if (j <= minLengthString) {
-                minLengthString = j;
-                indexOfMin = i;
+            int lengthOfString = arrayList.get(i).length();
+            if (lengthOfString >= maxLengthOfString) {
+                maxLengthOfString = lengthOfString;
+                indexOfMinOrMax = i;
+            } else if (lengthOfString <= minLengthOfString) {
+                minLengthOfString = lengthOfString;
+                indexOfMinOrMax = i;
             }
         }
-        if (indexOfMax < indexOfMin) {
-            System.out.println(arrayList.get(indexOfMax));
-        } else {
-            System.out.println(arrayList.get(indexOfMin));
-        }
+        System.out.println(arrayList.get(indexOfMinOrMax));
     }
 }
