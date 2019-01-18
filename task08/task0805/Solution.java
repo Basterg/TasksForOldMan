@@ -16,9 +16,9 @@ public class Solution {
     }
 
     public static void printValues() {
-        Collection<String> allValues = map.values();
-        for (String values : allValues) {
-            System.out.println(values);
+        Collection<String> values = map.values();
+        for (String value : values) {
+            System.out.println(value);
         }
     }
 
