@@ -8,8 +8,18 @@ import java.util.Map;
 */
 
 public class Solution {
+    static HashMap<String, String> map = new HashMap<>();
+
     public static void main(String[] args) throws Exception {
-        HashMap<String, String> map = new HashMap<>();
+        fillMap();
+        printKeys();
+    }
+
+    public static void printKeys() {
+        System.out.println(map.keySet());
+    }
+
+    public static void fillMap() {
         map.put("Sim", "Sim");
         map.put("Tom", "Tom");
         map.put("Arbus", "Arbus");
@@ -20,14 +30,5 @@ public class Solution {
         map.put("Food", "Food");
         map.put("Gevey", "Gevey");
         map.put("Hugs", "Hugs");
-
-        printKeys(map);
-    }
-
-    public static void printKeys(Map<String, String> map) {
-        for (Map.Entry<String, String> pair : map.entrySet()) {
-            String key = pair.getKey();
-            System.out.println(key);
-        }
     }
 }
