@@ -44,8 +44,8 @@ public class Solution {
     }
 
     public static void remove10000(List list) {
-        for (int i = 0; i < list.size(); i++) {
-            list.remove(i);
+        for (int i = 0; i < list.size();) {
+            list.remove(0);
         }
     }
 }
