@@ -19,15 +19,14 @@ public class Solution {
         }
     }
 
-
     public static HashMap<String, Cat> addCatsToMap(String[] cats) {
         HashMap<String, Cat> catsMap = new HashMap<>();
         for (int i = 0; i < cats.length; i++) {
-            catsMap.put(cats[i], new Cat(cats[i]));
+            String catName = cats[i];
+            catsMap.put(catName, new Cat(catName));
         }
         return catsMap;
     }
-
 
     public static class Cat {
         String name;

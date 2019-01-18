@@ -18,7 +18,7 @@ public class Solution {
 
     public static void printKeys() {
         Set<String> keySet = map.keySet();
-        for (String key : keySet){
+        for (String key : keySet) {
             System.out.println(key);
         }
     }
