@@ -1,18 +1,28 @@
 package com.javarush.task.task08.task0805;
 
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /* 
 На экране — значения!
 */
 
 public class Solution {
+    static HashMap<String, String> map = new HashMap<>();
+
     public static void main(String[] args) throws Exception {
-        HashMap<String, String> map = new HashMap<>();
+        fillMap();
+        printValues();
+    }
+
+    public static void printValues() {
+        Collection<String> setValues = map.values();
+        for (String values : setValues) {
+            System.out.println(values);
+        }
+    }
+
+    public static void fillMap() {
         map.put("Sim", "Sim");
         map.put("Tom", "Tom");
         map.put("Arbus", "Arbus");
@@ -23,14 +33,5 @@ public class Solution {
         map.put("Food", "Food");
         map.put("Gevey", "Gevey");
         map.put("Hugs", "Hugs");
-
-        printValues(map);
-    }
-
-    public static void printValues(Map<String, String> map) {
-        for (Map.Entry<String, String> pair : map.entrySet()) {
-            String key = pair.getKey();
-            System.out.println(key);
-        }
     }
 }
