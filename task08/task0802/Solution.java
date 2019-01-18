@@ -9,10 +9,16 @@ import java.util.Iterator;
 import java.util.Map;
 
 public class Solution {
+    static HashMap<String, String> hashMap = new HashMap<>();
+
     public static void main(String[] args) throws Exception {
-        HashMap<String, String> hashMap = new HashMap<>();
+        fillMap();
+        printEntriesOfMap();
+    }
+
+    public static void fillMap() {
         hashMap.put("арбуз", "ягода");
-        hashMap.put("анан", "трава");
+        hashMap.put("банан", "трава");
         hashMap.put("вишня", "ягода");
         hashMap.put("груша", "фрукт");
         hashMap.put("дыня", "овощ");
@@ -21,7 +27,9 @@ public class Solution {
         hashMap.put("земляника", "ягода");
         hashMap.put("ирис", "цветок");
         hashMap.put("картофель", "клубень");
+    }
 
+    public static void printEntriesOfMap() {
         Iterator<Map.Entry<String, String>> iterator = hashMap.entrySet().iterator();
         while (iterator.hasNext()) {
             Map.Entry<String, String> pair = iterator.next();
