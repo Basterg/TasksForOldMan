@@ -10,28 +10,29 @@ import java.util.ArrayList;
 */
 
 public class Solution {
+    static ArrayList<String> arrayList = new ArrayList<>();
+
     public static void main(String[] args) throws Exception {
-        ArrayList<String> arrayList = new ArrayList<>();
-        initializeArray(arrayList);
-        ArrayList<String> result = doubleValues(arrayList);
-        printArray(result);
+        initializeArray();
+        doubleValues();
+        printArray();
     }
 
-    public static void initializeArray(ArrayList<String> arrayList) throws IOException {
+    public static void initializeArray() throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         for (int i = 0; i < 10; i++) {
             arrayList.add(reader.readLine());
         }
     }
 
-    public static ArrayList<String> doubleValues(ArrayList<String> arrayList) {
-        for (int i = 0; i < 19; i +=2) {
+    public static ArrayList<String> doubleValues() {
+        for (int i = 0; i < arrayList.size(); i += 2) {
             arrayList.add(i + 1, arrayList.get(i));
         }
         return arrayList;
     }
 
-    public static void printArray(ArrayList<String> arrayList) {
+    public static void printArray() {
         for (int i = 0; i < arrayList.size(); i++) {
             System.out.println(arrayList.get(i));
         }
