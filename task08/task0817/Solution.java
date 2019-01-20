@@ -7,7 +7,7 @@ import java.util.Map;
 Нам повторы не нужны
 */
 
-ppublic class Solution {
+public class Solution {
     public static HashMap<String, String> createMap() {
         HashMap<String, String> map = new HashMap<>();
         map.put("Lalov", "lol");
