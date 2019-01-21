@@ -28,9 +28,11 @@ public class Solution {
             int nextElement = arrayList.get(i + 1);
             if (element == nextElement) {
                 addCount += 1;
-            } else if (addCount > count) {
-                count = addCount;
+            } else {
                 addCount = 1;
+            }
+            if (addCount > count) {
+                count = addCount;
             }
         }
         System.out.println(count);
