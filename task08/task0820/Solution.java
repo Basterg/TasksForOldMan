@@ -19,7 +19,8 @@ public class Solution {
         printPets(pets);
     }
 
-    public static Set<Cat> createCats() {Set<Cat> cats = new HashSet<>();
+    public static Set<Cat> createCats() {
+        Set<Cat> cats = new HashSet<>();
         for (int i = 0; i < 4; i++) {
             cats.add(new Cat());
         }
