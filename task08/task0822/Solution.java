@@ -18,12 +18,22 @@ public class Solution {
     }
 
     public static int getMinimum(List<Integer> array) {
-        // Найти минимум тут
-        return 0;
+        int min = array.get(0);
+        for (int i: array) {
+            if (i < min) {
+                min = i;
+            }
+        }
+        return min;
     }
 
     public static List<Integer> getIntegerList() throws IOException {
-        // Создать и заполнить список тут
-        return null;
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(reader.readLine());
+        List<Integer> integerList = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            integerList.add(Integer.parseInt(reader.readLine()));
+        }
+        return integerList;
     }
 }
