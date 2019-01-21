@@ -10,8 +10,8 @@ import java.util.List;
 
 public class Solution {
     public static List getListForGet() {
-     ArrayList<Object> arraylist = new ArrayList<>();
-     return arraylist;
+        ArrayList<Object> arraylist = new ArrayList<>();
+        return arraylist;
     }
 
     public static List getListForSet() {
