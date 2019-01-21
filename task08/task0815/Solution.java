@@ -35,13 +35,14 @@ public class Solution {
     }
 
     public static int getCountTheSameLastName(HashMap<String, String> map, String lastName) {
-        int countSameLastNames = 0;
-        for (String firstName : map.keySet()) {
-            if (firstName.equals("Lalova5")) {
-                countSameLastNames += 1;
+        int countTheSameLastNames = 0;
+        for (String checkLastName : map.keySet()) {
+            if (checkLastName.equals(lastName)) {
+                countTheSameLastNames = 1;
+                break;
             }
         }
-        return countSameLastNames;
+        return countTheSameLastNames;
     }
 
     public static void main(String[] args) {
