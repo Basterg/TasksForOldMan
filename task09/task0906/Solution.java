@@ -10,6 +10,9 @@ public class Solution {
     }
 
     public static void log(String s) {
-        //напишите тут ваш код
+        StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
+        System.out.print(stackTraceElements[2].getClassName() + ": ");
+        System.out.print(stackTraceElements[2].getMethodName() + ": ");
+        System.out.print(s);
     }
 }
