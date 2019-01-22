@@ -10,7 +10,14 @@ public class Solution {
     }
 
     public static int getStackTraceDeep() {
-        //напишите тут ваш код
+        StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
+        int deepCount = 0;
+        for (StackTraceElement element : stackTraceElements) {
+            deepCount++;
+        }
+        System.out.println(deepCount);
+
+        return deepCount;
     }
 }
 
