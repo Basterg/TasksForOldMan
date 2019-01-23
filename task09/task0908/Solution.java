@@ -11,7 +11,7 @@ public class Solution {
             String m = s.toLowerCase();
         }
         catch(NullPointerException e) {
-            System.out.println(e.getMessage());
+            System.out.println(e);
         }
     }
 }
