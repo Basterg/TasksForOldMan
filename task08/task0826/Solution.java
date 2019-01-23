@@ -25,6 +25,18 @@ public class Solution {
     }
 
     public static void sort(int[] array) {
-        //напишите тут ваш код
+        for (int i = 0; i < 19; i++) {
+            int max = array[i];
+            int indexOfMax = i;
+            for (int j = i + 1; j < 20; j++) {
+                if (array[j] > max) {
+                    max = array[j];
+                    indexOfMax = j;
+                }
+            }
+            int buffer = array[i];
+            array[i] = max;
+            array[indexOfMax] = buffer;
+        }
     }
 }
