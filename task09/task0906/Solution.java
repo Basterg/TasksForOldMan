@@ -10,8 +10,7 @@ public class Solution {
     }
 
     public static void log(String s) {
-        StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
-        System.out.print(stackTraceElements[2].getClassName() + ": "
-                + stackTraceElements[2].getMethodName() + ": " + s);
+        System.out.print(Thread.currentThread().getStackTrace()[2].getClassName() + ": "
+                + Thread.currentThread().getStackTrace()[2].getMethodName() + ": " + s);
     }
 }
