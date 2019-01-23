@@ -27,7 +27,7 @@ public class Solution {
     public static int getCountTheSameFirstName(HashMap<String, String> map, String name) {
         int countSameFirstNames = 0;
         for (String firstName : map.values()) {
-            if (firstName.equals("lalka4")) {
+            if (firstName.equals(name)) {
                 countSameFirstNames += 1;
             }
         }
@@ -35,17 +35,12 @@ public class Solution {
     }
 
     public static int getCountTheSameLastName(HashMap<String, String> map, String lastName) {
-        int countTheSameLastNames = 0;
-        for (String checkLastName : map.keySet()) {
-            if (checkLastName.equals(lastName)) {
-                countTheSameLastNames = 1;
-                break;
-            }
-        }
-        return countTheSameLastNames;
+        return 0;
     }
 
     public static void main(String[] args) {
-
+        HashMap<String, String> map = createMap();
+        System.out.println(getCountTheSameFirstName(map, "lalka4"));
+        System.out.println(getCountTheSameLastName(map, "lalov"));
     }
 }
