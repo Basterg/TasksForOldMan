@@ -12,19 +12,19 @@ public class Solution {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String string = reader.readLine();
-        firstLetersToUpperCase(string);
+        firstLettersToUpperCase(string);
     }
 
-    public static void firstLetersToUpperCase(String string) {
+    public static void firstLettersToUpperCase(String string) {
         char[] charsOfString = string.toCharArray();
-        System.out.print(Character.toString(charsOfString[0]).toUpperCase());
+        System.out.print(Character.toUpperCase(charsOfString[0]));
         for (int i = 1; i < charsOfString.length; i++) {
-            String leftElement = Character.toString(charsOfString[i - 1]);
-            String element = Character.toString(charsOfString[i]);
-            if (leftElement.equals(" ") && !element.equals(" ")) {
-                element = element.toUpperCase();
+            if (Character.isWhitespace(charsOfString[i - 1])
+                    && Character.isAlphabetic(charsOfString[i])) {
+                System.out.print(Character.toUpperCase(charsOfString[i]));
+            } else {
+                System.out.print(charsOfString[i]);
             }
-            System.out.print(element);
         }
     }
 }
