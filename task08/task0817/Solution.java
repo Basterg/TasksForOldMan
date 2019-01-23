@@ -25,8 +25,8 @@ public class Solution {
     public static void removeTheFirstNameDuplicates(Map<String, String> map) {
         ArrayList<String> listOfValues = new ArrayList<>(map.values());
         for (int i = 0; i < listOfValues.size(); i++) {
-            for (int j = 0; j < listOfValues.size(); j++) {
-                if (listOfValues.get(i).equals(listOfValues.get(j)) && i != j) {
+            for (int j = i + 1; j < listOfValues.size(); j++) {
+                if (listOfValues.get(i).equals(listOfValues.get(j))) {
                     removeItemFromMapByValue(map, listOfValues.get(j));
                 }
             }
