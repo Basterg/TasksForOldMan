@@ -1,7 +1,6 @@
 package com.javarush.task.task08.task0817;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /* 
 Нам повторы не нужны
@@ -24,7 +23,14 @@ public class Solution {
     }
 
     public static void removeTheFirstNameDuplicates(Map<String, String> map) {
-        removeItemFromMapByValue(map, "lol1");
+        ArrayList<String> listOfValues = new ArrayList<>(map.values());
+        for (int i = 0; i < listOfValues.size(); i++) {
+            for (int j = 0; j < listOfValues.size(); j++) {
+                if (listOfValues.get(i).equals(listOfValues.get(j)) && i != j) {
+                    removeItemFromMapByValue(map, listOfValues.get(j));
+                }
+            }
+        }
     }
 
     public static void removeItemFromMapByValue(Map<String, String> map, String value) {
