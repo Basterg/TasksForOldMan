@@ -16,20 +16,16 @@ public class Solution {
     public static void handleExceptions(Solution obj) {
         try {
             obj.method1();
+            obj.method2();
+            obj.method3();
+        }
+        catch (RemoteException e) {
+            System.out.println(e);
         }
         catch (IOException e) {
             System.out.println(e);
         }
-        try {
-            obj.method2();
-        }
         catch (NoSuchFieldException e) {
-            System.out.println(e);
-        }
-        try {
-            obj.method3();
-        }
-        catch (RemoteException e) {
             System.out.println(e);
         }
     }
