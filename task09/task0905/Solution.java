@@ -11,13 +11,9 @@ public class Solution {
 
     public static int getStackTraceDeep() {
         StackTraceElement[] stackTraceElements = Thread.currentThread().getStackTrace();
-        int deepCount = 0;
-        for (StackTraceElement element : stackTraceElements) {
-            deepCount++;
-        }
-        System.out.println(deepCount);
+        System.out.println(stackTraceElements.length);
 
-        return deepCount;
+        return stackTraceElements.length;
     }
 }
 
