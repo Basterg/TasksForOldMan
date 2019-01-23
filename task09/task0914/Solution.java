@@ -9,10 +9,6 @@ public class Solution {
         try {
             method1();
         }
-        catch (Exception3 e) {
-        }
-        catch (Exception2 e) {
-        }
         catch (Exception1 e) {
         }
     }
