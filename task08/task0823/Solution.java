@@ -19,11 +19,13 @@ public class Solution {
         char[] charsOfString = string.toCharArray();
         System.out.print(Character.toUpperCase(charsOfString[0]));
         for (int i = 1; i < charsOfString.length; i++) {
-            if (Character.isWhitespace(charsOfString[i - 1])
-                    && Character.isAlphabetic(charsOfString[i])) {
-                System.out.print(Character.toUpperCase(charsOfString[i]));
+            char currentSymbol = charsOfString[i];
+            char previousSymbol = charsOfString[i - 1];
+            if (Character.isWhitespace(previousSymbol)
+                    && Character.isAlphabetic(currentSymbol)) {
+                System.out.print(Character.toUpperCase(currentSymbol));
             } else {
-                System.out.print(charsOfString[i]);
+                System.out.print(currentSymbol);
             }
         }
     }
