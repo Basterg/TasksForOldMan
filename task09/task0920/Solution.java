@@ -10,8 +10,9 @@ public class Solution {
             System.out.println(i);
             try {
                 Thread.sleep(100);
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
+            }
+            catch (Exception e){
+                System.out.println(e);
             }
         }
     }
