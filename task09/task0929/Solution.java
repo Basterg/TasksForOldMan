@@ -10,7 +10,17 @@ public class Solution {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        String sourceFileName = reader.readLine();
+        String sourceFileName;
+
+        while (true) {
+            try {
+                sourceFileName = reader.readLine();
+                break;
+            } catch (FileNotFoundException e) {
+                System.out.println("Файл не существует.");
+            }
+        }
+
         String destinationFileName = reader.readLine();
 
         InputStream fileInputStream = getInputStream(sourceFileName);
