@@ -14,7 +14,9 @@ public class Solution {
     public static Wolf wolf = new Wolf();
 
     public static void main(String[] args) {
-        // напишите тут ваш код
+        wolf.killed.add(grandmother);
+        wolf.ate.add(grandmother);
+        woodman.killed.add(wolf);
     }
 
     // Красная шапочка
