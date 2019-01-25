@@ -11,7 +11,7 @@ public class Solution {
             try {
                 Thread.sleep(100);
             }
-            catch (Exception e){
+            catch (Exception e) {
                 System.out.println(e);
             }
         }
