@@ -24,8 +24,8 @@ public class Solution {
                 int number = Integer.parseInt(string);
                 list.add(number);
             } catch (NumberFormatException e) {
-                for (int numbers : list) {
-                    System.out.println(numbers);
+                for (int currentNumber : list) {
+                    System.out.println(currentNumber);
                 }
             }
         }
