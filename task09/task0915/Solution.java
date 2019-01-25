@@ -27,7 +27,8 @@ public class Solution {
         catch (FileSystemException e){
             BEAN.log(e);
             throw e;
-        } catch (IOException e){
+        }
+        catch (IOException e){
             BEAN.log(e);
         }
     }
