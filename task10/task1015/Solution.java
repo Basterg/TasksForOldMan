@@ -13,9 +13,15 @@ public class Solution {
     }
 
     public static ArrayList<String>[] createList() {
-        //напишите тут ваш код
-
-        return null;
+        ArrayList<String>[] arrayLists = new ArrayList[5];
+        for (int i = 0; i < arrayLists.length; i++) {
+            ArrayList<String> list = new ArrayList<>();
+            for (int j = 0; j < 3; j++) {
+                list.add("lul");
+            }
+            arrayLists[i] = list;
+        }
+        return arrayLists;
     }
 
     public static void printList(ArrayList<String>[] arrayOfStringList) {
