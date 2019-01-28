@@ -21,17 +21,17 @@ public class Solution {
         }
 
         public Human(String name, int age) {
-            this (name);
+            this(name);
             this.age = age;
         }
 
         public Human(String name, int age, boolean sex) {
-            this (name, age);
+            this(name, age);
             this.sex = sex;
         }
 
         public Human(String name, int age, boolean sex, int weight) {
-            this (name, age, sex);
+            this(name, age, sex);
             this.weight = weight;
         }
 
@@ -42,19 +42,19 @@ public class Solution {
 
         public Human(String name, int age, boolean sex, int weight,
                      int height, String marriedStatus) {
-            this (name, age, sex, weight, height);
+            this(name, age, sex, weight, height);
             this.marriedStatus = marriedStatus;
         }
 
         public Human(String name, boolean sex, int height, int weight) {
-            this (name);
+            this(name);
             this.sex = sex;
             this.height = height;
             this.weight = weight;
         }
 
         public Human(String name, boolean sex) {
-            this (name);
+            this(name);
             this.sex = sex;
         }
 
@@ -66,7 +66,7 @@ public class Solution {
         }
 
         public Human(String name, String marriedStatus) {
-            this (name);
+            this(name);
             this.marriedStatus = marriedStatus;
         }
     }
