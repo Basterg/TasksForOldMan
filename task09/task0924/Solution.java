@@ -14,8 +14,8 @@ public class Solution {
     public static Wolf wolf = new Wolf();
 
     public static void main(String[] args) {
-        wolf.killed.add(grandmother);
         wolf.ate.add(grandmother);
+        wolf.ate.add(hood);
         woodman.killed.add(wolf);
     }
 
