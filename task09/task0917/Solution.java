@@ -15,7 +15,7 @@ public class Solution {
             obj.method2();
             obj.method3();
         }
-        catch (Exception e) {
+        catch (NullPointerException | IndexOutOfBoundsException | NumberFormatException e) {
             printStack(e);
         }
     }
