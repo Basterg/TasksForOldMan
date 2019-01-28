@@ -30,22 +30,16 @@ public class Solution {
             list.add(s.toLowerCase());
         }
 
-        String newString = "";
-        for (int i =0; i < list.size(); i++) {
-            newString += list.get(i);
-        }
-
-        char[] charsOfString = newString.toCharArray();
-        for (int j = 0; j < alphabet.size(); j++) {
+        for (char letter : alphabet) {
             int count = 0;
-            Character currentLetter = alphabet.get(j);
-            for (int k = 0; k < charsOfString.length; k++) {
-                Character currentChar = charsOfString[k];
-                if (currentLetter.equals(currentChar)) {
-                    count += 1;
+            for (String string : list) {
+                for (char currentLetter : string.toCharArray()) {
+                    if (letter == currentLetter) {
+                        count++;
+                    }
                 }
             }
-            System.out.println(currentLetter + " " + count);
+            System.out.println(letter + " " + count);
         }
     }
 
