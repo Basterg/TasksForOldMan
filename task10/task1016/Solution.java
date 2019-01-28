@@ -27,27 +27,21 @@ public class Solution {
     }
 
     public static Map<String, Integer> countWords(ArrayList<String> words) {
-        HashMap<String, Integer> result = new HashMap();
-        /* Заполняем мапу словами, затем переводим ключи мапы в список,
-        таки образом, у нас есть список слов без их копий
-         */
-
+        HashMap<String, Integer> map = new HashMap<>();
         for (int i = 0; i < words.size(); i++) {
-            result.put(words.get(i), 0);
-        }
-
-        ArrayList<String> listOfKeys = new ArrayList<>(result.keySet());
-        for (int i = 0; i < listOfKeys.size(); i++) {
-            int count = 1;
-            String currentWord = listOfKeys.get(i);
-            for (int j = 0; j < words.size(); j++) {
-                if (currentWord.equals(words.get(j))) {
-                    count++;
+            String currentWord = words.get(i);
+            if (!map.containsKey(currentWord)) {
+                int count = 1;
+                for (int j = i + 1; j < words.size(); j++) {
+                    String nextWord = words.get(j);
+                    if (currentWord.equals(nextWord)) {
+                        count++;
+                    }
                 }
+                map.put(currentWord, count);
             }
-            result.put(currentWord, count);
         }
-        return result;
+        return map;
     }
 
 }
