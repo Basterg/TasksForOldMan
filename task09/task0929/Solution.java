@@ -12,15 +12,17 @@ public class Solution {
 
         String sourceFileName;
         String destinationFileName;
-        FileInputStream fileInputStream;
 
-        while ( true ) {
+        FileInputStream fileInputStream;
+        while (true) {
             sourceFileName = reader.readLine();
-            try {
+            try
+            {
                 fileInputStream = new FileInputStream(sourceFileName);
                 break;
             }
-            catch (FileNotFoundException e) {
+            catch (FileNotFoundException e)
+            {
                 System.out.println("Файл не существует.");
             }
         }
@@ -35,14 +37,6 @@ public class Solution {
 
         fileInputStream.close();
         fileOutputStream.close();
-    }
-
-    public static InputStream getInputStream(String fileName) throws IOException {
-        return new FileInputStream(fileName);
-    }
-
-    public static OutputStream getOutputStream(String fileName) throws IOException {
-        return new FileOutputStream(fileName);
     }
 }
 
