@@ -39,19 +39,16 @@ public class Solution {
         private int age;
         private ArrayList<Human> children = new ArrayList<>();
 
-        public Human(String name, boolean sex, int age, ArrayList<Human> children) {
-            this.name = name;
-            this.sex = sex;
-            this.age = age;
-            this.children = children;
-            System.out.println(toString());
-        }
-
         public Human(String name, boolean sex, int age) {
             this.name = name;
             this.sex = sex;
             this.age = age;
             System.out.println(toString());
+        }
+
+        public Human(String name, boolean sex, int age, ArrayList<Human> children) {
+            this(name, sex, age);
+            this.children = children;
         }
 
         public String toString() {
