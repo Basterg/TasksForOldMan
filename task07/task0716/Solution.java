@@ -30,6 +30,8 @@ public class Solution {
             } else if (word.contains("л")) {
                 newList.add(word);
                 newList.add(word);
+            } else  if (!word.contains("р") && !word.contains("л")) {
+                newList.add(word);
             }
         }
         return newList;
